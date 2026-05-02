@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #93426e;
+  --color-primary-container: #ff9dce;
+  --color-on-primary-container: #7b2b56;
+  
+  --color-secondary: #286864;
+  --color-secondary-container: #acebe5;
+  --color-on-secondary-container: #2d6c68;
+  
+  --color-tertiary: #695f0e;
+  --color-tertiary-container: #cabd64;
+  --color-on-tertiary-container: #544c00;
+  
+  --color-background: #fff8f9;
+  --color-surface: #fff8f9;
+  --color-surface-container: #fbe9f1;
+  --color-surface-container-low: #fff0f6;
+  --color-surface-container-high: #f5e4eb;
+  
+  --color-on-surface: #22191e;
+  --color-on-surface-variant: #524349;
+  --color-outline: #847279;
+}
+
+@layer utilities {
+  .jelly-shadow {
+    box-shadow: 0 10px 25px -5px rgba(147, 66, 110, 0.2);
+  }
+  
+  .sugar-glass {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  .inner-press {
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  @apply bg-background text-on-surface font-sans antialiased selection:bg-primary-container selection:text-on-primary-container;
+}
