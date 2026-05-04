@@ -1,0 +1,21 @@
+services:
+  verify:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: verify
+      args:
+        FLUTTER_VERSION: 3.41.9
+    image: candy-mobile-app:verify
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: web
+      args:
+        FLUTTER_VERSION: 3.41.9
+    image: candy-mobile-app:web
+    ports:
+      - "8080:80"
+

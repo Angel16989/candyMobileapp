@@ -1,0 +1,9 @@
+{
+  "name": "CandyLand",
+  "short_name": "CandyLand",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff8f9",
+  "theme_color": "#93426e",
+  "description": "CandyLand storefront rebuilt in Flutter."
+}
